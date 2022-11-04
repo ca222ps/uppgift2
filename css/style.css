@@ -1,52 +1,116 @@
 @charset "UTF-8";
 
-/* ----- Grundstil för webbsidan ----- */
+/* ----- Grunder ----- */
 
 html {
     font-size: 16px;
 }
 
+html, body {
+    height: 100%; /* Tycker ned sidfoten till botten */
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+img {
+    width: 400px;
+}
+
+/* ----- Layout ----- */
+
 body {
-    background-color: #f5e6cb;
+    background-color: #963d41;
     color: #000000;
     max-width: 800px;
     margin: 0 auto;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: 70px 1fr 50px;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "nav footer";
 }
 
-/* ----- Stil för experiment med boxarna ----- */
-
-.wrapper { /* Stil för elementet som omger boxarna */
-    background-color: #ffffff;
-    width: 100%;
-    padding: 20px;
-    font-size: 1rem;
-}
-
-.wrapper div { /* Stil för alla boxar */
-    width: 200px;
-    height: 100px;
+nav {
+    grid-area: nav;
+    background-color: #a54fcd;
     padding: 10px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 20px;
-    border-width: 6px; border-style: solid; border-color: #000000;
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px 2px #333333;
-}
-
-#box1 {
-    background-color: #d89228;
-    overflow: auto;
-}
+}    
 
 
-#box2 {
+
+main {
+    grid-area: main;
+    background-color: #4fb0cd;
+} 
+
+h2 {
+    background-color: #cd734f;
+} 
+
+p {
+    background-color: #c5cd4f;
+} 
+
+footer {
     background-color: #4fcd6c;
-}
+} 
 
-#box3 {
-    background-color: #2886d8;
-}
+
+
+/* ----- Stil för nav och headern -----*/
+
+nav li {
+    display: block;
+    list-style: none;
+    margin-bottom: 2em;
+} 
+
+header {
+    grid-area: header;
+    font-size: 100%;
+    background-color: #cd884f;
+}    
+
+header h1 {
+    margin-top: 0;
+}    
+
+
+/* ----- Media queries ----- */
+
+@media screen and (max-width: 550px) {
+
+body {
+        grid-template-columns: auto;
+        grid-template-rows: 70px min-content auto 50px;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";    
+
+}     
+    header {
+        font-size: 80%;
+
+}    
+
+    nav li {
+        display: inline;
+        margin-bottom: 0;
+        margin-right: 2em;
+    }  
+}  
+
+
