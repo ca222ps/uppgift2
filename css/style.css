@@ -21,7 +21,7 @@ img {
 }
 
 img {
-    width: 400px;
+    width: 320px;
 }
 
 /* ----- Layout ----- */
@@ -113,7 +113,7 @@ body {
     }  
 
     .floatImg {
-        float: left;
+        float: right;
         margin: 15px;
     }
 }  
