@@ -29,7 +29,7 @@ img {
 body {
     background-color: #963d41;
     color: #000000;
-    max-width: 840px;
+    max-width: 1200px;
     margin: 0 auto;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
@@ -89,7 +89,7 @@ header h1 {
 
 /* ----- Media queries ----- */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
 
 body {
         grid-template-columns: auto;
@@ -111,6 +111,11 @@ body {
         margin-bottom: 0;
         margin-right: 2em;
     }  
+
+    .floatImg {
+        float: left;
+        margin: 15px;
+    }
 }  
 
 .wrapper {
@@ -142,10 +147,11 @@ body {
 
 
 
-@media (min-width: 550px) {
+@media (min-width: 650px) {
     .wrapper div {
         flex-basis: 25%;
     }
+
 }
 
 
