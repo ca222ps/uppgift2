@@ -133,6 +133,7 @@ body {
     gap: 15px;
     justify-content:space-evenly;
     align-items: stretch;
+
 }
 
 .wrapper div {
@@ -145,6 +146,15 @@ body {
     flex: 1 0 100%;
 }
 
+#box1 {
+    background-color: #a54fcd;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+#box1:hover {
+    background-color: #cd884f;
+}
 
 
 @media (min-width: 650px) {
