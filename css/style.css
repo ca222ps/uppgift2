@@ -66,6 +66,19 @@ footer {
     background-color: #4fcd6c;
 } 
 
+.questions {
+    font-weight: bold;
+}
+
+img {
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+div img:hover {
+    opacity: 1;
+}
 
 
 /* ----- Stil för nav och headern -----*/
@@ -112,14 +125,21 @@ body {
         margin-right: 2em;
     }  
 
+
+
     .floatImg {
         float: right;
         margin: 15px;
     }
-}  
 
-.wrapper {
+    .wrapper {
     flex-direction:column-reverse;
+    }
+
+    img {
+        max-width: 40%;
+    }
+
 }
 
 /* ----- Grid flex boxar ----- */
@@ -161,6 +181,7 @@ body {
     .wrapper div {
         flex-basis: 25%;
     }
+    
 
 }
 
