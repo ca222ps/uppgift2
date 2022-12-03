@@ -6,11 +6,22 @@ html {
     font-size: 16px;
 }
 
-html, body {
-    height: 100%; /* Tycker ned sidfoten till botten */
+html,
+body {
+    height: 100%;
+    /* Tycker ned sidfoten till botten */
 }
 
-html, body, nav, header, main, aside, footer, article, section, div {
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,7 +42,7 @@ body {
     color: #000000;
     max-width: 1200px;
     margin: 0 auto;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     grid-template-columns: 140px 1fr;
     grid-template-rows: 70px 1fr 50px;
@@ -45,43 +56,37 @@ nav {
     grid-area: nav;
     background-color: #94a8e9;
     padding: 10px;
-}    
+}
 
 
 h2 {
     margin-left: 1em;
-    color:#8ae0e0;
-} 
+    color: #8ae0e0;
+}
 
 
 
 footer {
     background-color: #38b4b4;
-} 
+}
 
 .questions {
     font-weight: bold;
 }
-/*
+
 img {
     opacity: 0.5;
     transition-property: opacity;
     transition-duration: 2s;
-}
-
-div img:hover {
-    opacity: 1;
-}
-*/
-
-img {
     transition: transform 1.5s;
-    position:relative;
+    position: relative;
 }
 
 div img:hover {
     transform: scale(1.05);
+    opacity: 1;
 }
+
 
 #navigation {
     margin: auto;
@@ -100,16 +105,16 @@ nav li {
     display: block;
     list-style: none;
     margin-bottom: 2em;
-} 
+}
 
 header {
     grid-area: header;
     background-color: #574fcd;
-}    
+}
 
 header h1 {
     margin-top: 0;
-}    
+}
 
 
 /* ----- Media query 550 -----*/
@@ -125,6 +130,7 @@ header h1 {
             "main"
             "footer";
     }
+
     header {
         font-size: 80%;
     }
@@ -135,26 +141,27 @@ header h1 {
 
 @media screen and (min-width: 500px) and (max-width: 700px) {
 
-body {
+    body {
         grid-template-columns: auto;
         grid-template-rows: 70px min-content auto 50px;
         grid-template-areas:
             "header"
             "nav"
             "main"
-            "footer";    
+            "footer";
 
-}     
+    }
+
     header {
         font-size: 90%;
 
-}    
+    }
 
     nav li {
         display: inline;
         margin-bottom: 0;
         margin-right: 2em;
-    }  
+    }
 
 
 
@@ -164,7 +171,7 @@ body {
     }
 
     .wrapper {
-    flex-direction:column-reverse;
+        flex-direction: column-reverse;
     }
 
     img {
@@ -182,7 +189,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: stretch;
 
 }
@@ -212,8 +219,6 @@ body {
     .wrapper div {
         flex-basis: 25%;
     }
-    
+
 
 }
-
-
