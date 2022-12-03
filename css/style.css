@@ -53,9 +53,7 @@ h2 {
     color:#8ae0e0;
 } 
 
-p {
-    background-color: #4f6ccd;
-} 
+
 
 footer {
     background-color: #38b4b4;
@@ -106,7 +104,6 @@ nav li {
 
 header {
     grid-area: header;
-    font-size: 100%;
     background-color: #574fcd;
 }    
 
@@ -115,9 +112,28 @@ header h1 {
 }    
 
 
-/* ----- Media queries ----- */
+/* ----- Media query 550 -----*/
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 500px) {
+
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: 70px min-content auto 50px;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+    header {
+        font-size: 80%;
+    }
+}
+
+
+/* ----- Media query 800 ----- */
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
 
 body {
         grid-template-columns: auto;
@@ -130,7 +146,7 @@ body {
 
 }     
     header {
-        font-size: 80%;
+        font-size: 90%;
 
 }    
 
@@ -182,17 +198,17 @@ body {
 }
 
 #box1 {
-    background-color: #328d6a;
+    background-color: #318c69;
     transition-duration: 0.5s;
     transition-timing-function: linear;
 }
 
 #box1:hover {
-    background-color: #328d6a;
+    background-color: #1b773e;
 }
 
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
     .wrapper div {
         flex-basis: 25%;
     }
